@@ -1,0 +1,133 @@
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            char[] nome = { 'J', 'o', 'a', 'o' }; // "Joao\0" = string 
+            string charToStr;
+            int i = 0;
+            int[] numeros = { -1, 5, 2, 10, 104 };
+            int valor;
+            bool ePar = false;
+
+            //imprimir numeros do array 1 de cada vez
+
+            /*
+             Criar duas funcoes
+            1) a primeira funcao modifica o numero do meio do array de int para um numero par.
+            Por exemplo, o array {1,3,6} tem o numero do meio que e' 3
+
+            2) a segunda funcao vai receber um array de char e vai retornar o numero de quantos char tem no array.
+            */
+            
+            while(i < 5)
+            {
+                valor = numeros[i];
+                ePar = verificarNumeroPar(valor);
+
+                if (ePar)
+                {
+                    Console.WriteLine("Valor de numeros no indexo " + i + " e igual a: " + valor + ". Esse e' par.");
+                }
+                else
+                {
+                    Console.WriteLine("Valor de numeros no indexo " + i + " e igual a: " + valor);
+                }
+                i = i + 1;
+            }
+
+            numeros[3] = 843;
+            imprimirTexto();
+            Console.ReadLine();
+            
+            
+            i = 0;
+
+            while (i < 5)
+            {
+                valor = numeros[i];
+                Console.WriteLine("Valor de numeros no indexo " + i + " e igual a: " + valor);
+                i = i + 1;
+            }
+            imprimirTexto();
+            Console.ReadLine();
+
+            i = 0;
+            while (NextChar(nome,i) != '\0')
+            {
+                i++;// i = i+1;
+            }
+
+            charToStr = string.Concat(nome);
+
+            Console.WriteLine("A palavra '" + charToStr + "' tem " + i + " caraters.");
+            imprimirTexto();
+            Console.ReadLine();
+        }// end main()
+
+        static void imprimirTexto()
+        {
+            Console.WriteLine("\n\n\nAperte caracter e enter <- para continuar");
+        }
+
+        static bool verificarNumeroPar(int numero1)
+        {
+            bool numeroPar = false;
+
+            // se parametro numero1 e' divisivel por 2
+            //execute as instrucoes do "if()"
+            if(numero1%2 == 0)
+            {
+                //esse numero e' par
+                //porem acertar variavel numeroPar = verdadeiro
+                numeroPar = true;
+            }
+
+            //retornar resultado
+            return numeroPar;
+        }
+
+
+        static char NextChar(char[] str, int index)
+        {
+            char charAtIndex = '\0';
+
+            
+             if(str.Length > index)
+            {
+                charAtIndex = str[index];
+            }
+            
+
+            return charAtIndex;
+        }
+        void arrayPrint()
+        {
+            int[] numeros = new int[5];
+            int x = 0; //vairavel para atravessar array
+            int maior; // maior numero
+            int sum = 0;
+            numeros[0] = -5;
+            numeros[1] = 2;
+            numeros[2] = 0;
+            numeros[3] = 12;
+            numeros[4] = -8;
+
+
+            maior = numeros[0];
+            //fazer um loop para imprimir o array
+
+            while (x < 5)
+            {
+                Console.WriteLine("Comparando valor de maior: " + maior + " com valor de numeros[" + x + "] = " + numeros[x]);
+                sum = sum + numeros[x];
+                if (maior < numeros[x])
+                {
+                    maior = numeros[x];
+                }
+                x = x + 1;
+            }
+
+            Console.WriteLine("O maior numero do array e': " + maior);
+            Console.WriteLine("A soma do array e': " + sum);
+        }
+    }
