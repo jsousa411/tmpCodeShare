@@ -35,6 +35,24 @@ namespace TutorialLud2
 
         }// end main()
 
+         /// <summary>
+        /// Fazer uma funcao que faiz o swap de dois numeros do centro do array
+        /// </summary>
+        /// <param name="r1"></param>
+        static void swapcentro(int[] r1)
+        {
+            //calcular o tamanho do array array.length = o tamanho do array
+            //verificar se o tamnho do array e' par ou impar tamnho % 2 == 0?
+            //teste numero 1
+            //{ 1,3,2} -> { 2,3,1}
+
+
+            //teste numero 2
+            //{ 5,3,0,2} -> { 5,0,3,2}
+
+            //teste numero 3
+            //{ 77,48,1,3,2} -> { 77,3,1,48,2 }
+        }
 
         static void leiaLinha()
         {
