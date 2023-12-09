@@ -297,3 +297,72 @@ Por exemplo, o array {1,3,6} tem o numero do meio que e' 3
 //charToStr = string.Concat(nome);
 
 //Console.WriteLine("A palavra '" + charToStr + "' tem " + i + " caraters.");
+
+
+/* aula de array 12 do 9 de 2023
+
+
+            //um programa que atraves um array
+            int iterador = 0;
+            int array_tamanho = 100;
+            int valor;
+
+            int[] numeros = new int[array_tamanho];
+
+            //numeros tem o valor de um enderoco na memoria.  Esse enderco e' um numero como "X082828"
+
+            //para eu ter acesso ao dados our valor que esta guardado dentro do array(enderoc da memoria) 
+            //tenho que indexar o array
+
+            //quando indexa um endereco, voce esta olhando ou guardando algo dentro daquele espaco
+            numeros[0] = -2;  
+            numeros[1] = 3; 
+            numeros[2] = 12; 
+            numeros[3] = 7;
+            numeros[4] = 3;
+
+            //atravessar o array
+            while(iterador < 5)
+            {
+
+                Console.Write(numeros[iterador] + " ");
+
+                //Console.WriteLine("valor do iterador e' " + iterador);
+
+                iterador = iterador+1; // iterador = 5
+
+            }
+
+            Console.WriteLine("Hello");
+
+            //qual e' o valor do variavel iterador quando o program chegar nessa linha? 5
+
+
+            // o valor de numeros[4] e' 3
+
+            while (numeros[4] < 5)
+            {
+                iterador = iterador - 1;//qual e' o valor do iterador
+                                        //nessa linha na primeira vez?  4
+                
+                Console.WriteLine(numeros[iterador]);
+
+                if(iterador == 0)
+                {
+                    //quero sair do loop
+                    //stop
+                    Console.WriteLine("Entrou no if:  " + numeros[4]);
+                    numeros[4] = 6;
+                    Console.WriteLine("Nesse ponto o iterador e' igual a: " + iterador);
+                    Console.WriteLine("Nesse ponto o numeros[4] e' igual a: " + numeros[4]);
+
+                }
+
+            }
+
+            Console.WriteLine("Press any key to end program!");
+
+            Console.ReadLine();
+         
+
+*/
